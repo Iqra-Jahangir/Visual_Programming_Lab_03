@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#8799ea,#c29bea);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculator{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    padding:20px;
+    border-radius:25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    width:320px;
+}
+
+.calculator__output{
+    background:white;
+    color:#333;
+    font-size:2rem;
+    text-align:right;
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.calculator__keys{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:10px;
+}
+
+button{
+    border:none;
+    padding:18px;
+    font-size:1.2rem;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.number{
+    background:#f1f1f1;
+}
+
+.operator{
+    background: #d671ba;
+    color:white;
+    font-size: 1.5rem;
+}
+
+.equal{
+    background:#d671ba;
+    color:white;
+}
+
+.clear{
+    background:#7694d4;
+    color:#f3f4f6;
+    font-weight: 700;
+    font-size: large;
+}
+</style>
+</head>
+
+<body>
+
+<div class="calculator">
+    <div class="calculator__output" id="display">0</div>
+
+    <div class="calculator__keys">
+        <button class="clear">AC</button>
+        <button class="clear">DEL</button>
+        <button class="operator">÷</button>
+        <button class="operator">×</button>
+
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="operator">-</button>
+
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="operator">+</button>
+
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="equal">=</button>
+
+        <button class="number">0</button>
+        <button class="number">.</button>
+    </div>
+</div>
+
+</body>
+</html>

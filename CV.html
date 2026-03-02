@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Iqra Jahangir</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f2f5;
+  padding: 30px 15px;
+  color: #83bbf4;
+}
+
+.cv-container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
+.sidebar {
+  background: #3c2c5f;
+  color: white;
+  padding: 35px 22px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #de7088;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px auto;
+  border: 3px solid rgba(255,255,255,0.2);
+}
+
+.profile h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.profile p {
+  font-size: 0.75rem;
+  color: #a0b0d0;
+  margin-top: 4px;
+}
+
+.s-title {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #e85d7a;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 5px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: #c0cce0;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.contact-item span:first-child {
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pill {
+  background: rgba(255,255,255,0.1);
+  color: #d0ddf0;
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.soft-list {
+  list-style: none;
+}
+
+.soft-list li {
+  font-size: 0.76rem;
+  color: #c0cce0;
+  padding: 4px 0;
+  padding-left: 12px;
+  position: relative;
+}
+
+.soft-list li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: #e85d7a;
+}
+
+.lang-row {
+  margin-bottom: 10px;
+}
+
+.lang-row span {
+  font-size: 0.76rem;
+  color: #c0cce0;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.bar {
+  height: 4px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: #e85d7a;
+}
+
+.main {
+  padding: 35px 30px;
+}
+
+.main-name {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #2d3561;
+  line-height: 1.1;
+}
+
+.main-name span {
+  color: #e85d7a;
+}
+
+.tagline {
+  font-size: 0.82rem;
+  color: #888;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.summary-text {
+  font-size: 0.83rem;
+  color: #555;
+  line-height: 1.8;
+  padding: 14px 16px;
+  background: #f8f9ff;
+  border-left: 3px solid #2d3561;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 28px;
+}
+
+.section-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #2d3561;
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1.5px;
+  background: #e8eaf0;
+}
+
+section {
+  margin-bottom: 26px;
+}
+
+.edu-card {
+  background: #f8f9ff;
+  border: 1.5px solid #e0e3f0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.edu-degree {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #2d3561;
+}
+
+.edu-uni {
+  font-size: 0.76rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+.grad-tag {
+  background: #fff3cd;
+  color: #856404;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.proj-card {
+  border-radius: 10px;
+  padding: 14px;
+  border: 1.5px solid transparent;
+  transition: transform 0.2s;
+}
+
+.proj-card:hover {
+  transform: translateY(-3px);
+}
+
+.c1 { background: #fff0f3; border-color: #ffd6df; }
+.c2 { background: #f0fff8; border-color: #c2f0da; }
+.c3 { background: #f5f0ff; border-color: #ddd0ff; }
+.c4 { background: #fffbf0; border-color: #ffe9a0; }
+.c5 { background: #f0f8ff; border-color: #c0dcff; }
+.c6 { background: #fff5f0; border-color: #ffd4b8; }
+
+.proj-emoji {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.proj-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2d3561;
+  margin-bottom: 4px;
+}
+
+.proj-desc {
+  font-size: 0.75rem;
+  color: #666;
+  line-height: 1.55;
+}
+
+.proj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.ptag {
+  font-size: 0.64rem;
+  background: rgba(0,0,0,0.06);
+  color: #555;
+  padding: 2px 7px;
+  border-radius: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.skill-box {
+  background: #f8f9ff;
+  border: 1.5px solid #e0e3f0;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.skill-box-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.t1 { color: #e85d7a; }
+.t2 { color: #2aab7e; }
+.t3 { color: #7c5cbf; }
+
+.skill-box ul {
+  list-style: none;
+}
+
+.skill-box ul li {
+  font-size: 0.76rem;
+  color: #555;
+  padding: 3px 0;
+  padding-left: 12px;
+  position: relative;
+}
+
+.skill-box ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #bbb;
+  font-size: 0.65rem;
+}
+
+@media (max-width: 720px) {
+  .cv-container {
+    grid-template-columns: 1fr;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-name {
+    font-size: 1.5rem;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="cv-container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="profile">
+      <div class="avatar">IJ</div>
+      <h1>Iqra Jahangir</h1>
+      <p>CS Student · Developer</p>
+    </div>
+
+    <div class="s-title">Contact</div>
+    <div class="contact-item"><span>📍</span><span>Rawalpindi, Pakistan</span></div>
+    <div class="contact-item"><span>✉️</span><span>iqrajahangir85@gmail.com</span></div>
+    <div class="contact-item"><span>📞</span><span>+301 5937589</span></div>
+
+    <div class="s-title">Tech Stack</div>
+    <div class="pills">
+      <span class="pill">C#</span>
+      <span class="pill">C++</span>
+      <span class="pill">Java</span>
+      <span class="pill">HTML</span>
+      <span class="pill">CSS</span>
+      <span class="pill">Flutter</span>
+      <span class="pill">MySQL</span>
+      <span class="pill">NoSQL</span>
+      <span class="pill">ASM 8086</span>
+      <span class="pill">JavaScript</span>
+    </div>
+
+    <div class="s-title">Soft Skills</div>
+    <ul class="soft-list">
+      <li>Analytical thinking</li>
+      <li>Attention to detail</li>
+      <li>Time management</li>
+      <li>Team collaboration</li>
+    </ul>
+
+    <div class="s-title">Languages</div>
+    <div class="lang-row">
+      <span>English — Fluent</span>
+      <div class="bar"><div class="bar-fill" style="width:95%"></div></div>
+    </div>
+    <div class="lang-row">
+      <span>Urdu — Native</span>
+      <div class="bar"><div class="bar-fill" style="width:100%"></div></div>
+    </div>
+
+  </aside>
+
+  <main class="main">
+
+    <div class="main-name">Iqra <span>Jahangir</span></div>
+    <div class="tagline">Computer Science Student @ Air University, Islamabad</div>
+
+    <div class="summary-text">
+      CS student with a strong interest in programming, web &amp; app development, and system-level computing.
+      Skilled in HTML, CSS, C#, Flutter, NoSQL, MySQL, and Assembly. Passionate about building efficient
+      applications and improving problem-solving skills.
+    </div>
+
+    <section>
+      <div class="section-title">Education</div>
+      <div class="edu-card">
+        <div>
+          <div class="edu-degree">B.Sc. Computer Science</div>
+          <div class="edu-uni">Air University, Islamabad</div>
+        </div>
+        <span class="grad-tag">Graduating 2028</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Projects</div>
+      <div class="projects-grid">
+
+        <div class="proj-card c1">
+          <div class="proj-emoji">🆘</div>
+          <div class="proj-name">AlertMate</div>
+          <div class="proj-desc">Offline app for emergencies in remote areas. Stores contacts &amp; local authorities — no Wi-Fi needed.</div>
+          <div class="proj-tags"><span class="ptag">Flutter</span><span class="ptag">Offline</span><span class="ptag">Mobile</span></div>
+        </div>
+
+        <div class="proj-card c2">
+          <div class="proj-emoji">🎵</div>
+          <div class="proj-name">HarmoniSense</div>
+          <div class="proj-desc">Instrumental music player in C++ with playlist management and playback features.</div>
+          <div class="proj-tags"><span class="ptag">C++</span><span class="ptag">OOP</span></div>
+        </div>
+
+        <div class="proj-card c3">
+          <div class="proj-emoji">🃏</div>
+          <div class="proj-name">UNO</div>
+          <div class="proj-desc">Java UNO game with single/multiplayer modes and AI bots.</div>
+          <div class="proj-tags"><span class="ptag">Java</span><span class="ptag">Game Logic</span><span class="ptag">AI Bots</span></div>
+        </div>
+
+        <div class="proj-card c4">
+          <div class="proj-emoji">💊</div>
+          <div class="proj-name">Pharmacy Management</div>
+          <div class="proj-desc">Hospital system for managing patient and medicine data efficiently.</div>
+          <div class="proj-tags"><span class="ptag">MySQL</span><span class="ptag">C#</span></div>
+        </div>
+
+        <div class="proj-card c5">
+          <div class="proj-emoji">🗓️</div>
+          <div class="proj-name">Responsive Timetable</div>
+          <div class="proj-desc">Class timetable with colour-coding, CSS Grid and media queries.</div>
+          <div class="proj-tags"><span class="ptag">HTML</span><span class="ptag">CSS Grid</span></div>
+        </div>
+
+        <div class="proj-card c6">
+          <div class="proj-emoji">🧮</div>
+          <div class="proj-name">Basic Calculator</div>
+          <div class="proj-desc">Browser calculator with arithmetic operations and clean UI.</div>
+          <div class="proj-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-grid">
+
+        <div class="skill-box">
+          <div class="skill-box-title t1">Programming</div>
+          <ul>
+            <li>C# &amp; C++</li>
+            <li>Assembly (8086)</li>
+            <li>HTML &amp; CSS</li>
+            <li>Java</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-box-title t2">Web &amp; App Dev</div>
+          <ul>
+            <li>Responsive Design</li>
+            <li>CSS Grid &amp; Flexbox</li>
+            <li>Flutter</li>
+            <li>UI Styling</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-box-title t3">Other</div>
+          <ul>
+            <li>OOP Concepts</li>
+            <li>MySQL &amp; NoSQL</li>
+            <li>Debugging</li>
+            <li>Basic Networking</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>
